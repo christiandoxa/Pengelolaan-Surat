@@ -29,6 +29,9 @@
     <!-- DataTables Responsive CSS -->
     <link href="<?php echo base_url() ?>assets/vendor/datatables-responsive/dataTables.responsive.css" rel="stylesheet">
 
+    <!-- DataTable Button CSS -->
+    <link href="<?php echo base_url() ?>assets/vendor/datatables/css/buttons.dataTables.min.css" rel="stylesheet">
+
     <!-- Custom Fonts -->
     <link href="<?php echo base_url() ?>assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet"
           type="text/css">
@@ -168,12 +171,23 @@
 <script src="<?php echo base_url() ?>assets/vendor/datatables/js/jquery.dataTables.min.js"></script>
 <script src="<?php echo base_url() ?>assets/vendor/datatables-plugins/dataTables.bootstrap.min.js"></script>
 <script src="<?php echo base_url() ?>assets/vendor/datatables-responsive/dataTables.responsive.js"></script>
+<script src="<?php echo base_url() ?>assets/vendor/datatables/js/dataTables.buttons.min.js"></script>
+<script src="<?php echo base_url() ?>assets/vendor/datatables/js/buttons.flash.min.js"></script>
+<script src="<?php echo base_url() ?>assets/vendor/datatables/js/jszip.min.js"></script>
+<script src="<?php echo base_url() ?>assets/vendor/datatables/js/pdfmake.min.js"></script>
+<script src="<?php echo base_url() ?>assets/vendor/datatables/js/vfs_fonts.js"></script>
+<script src="<?php echo base_url() ?>assets/vendor/datatables/js/buttons.html5.min.js"></script>
+<script src="<?php echo base_url() ?>assets/vendor/datatables/js/buttons.print.min.js"></script>
 
 <!-- Page-Level Demo Scripts - Tables - Use for reference -->
 <script>
     $(document).ready(function () {
         $('#dataTables-example').DataTable({
-            responsive: true
+            responsive: true,
+            dom: 'Bfrtip',
+            buttons: [
+                'copy', 'csv', 'excel', 'pdf', 'print'
+            ]
         });
     });
 </script>
